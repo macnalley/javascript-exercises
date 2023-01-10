@@ -7,28 +7,15 @@ const subtract = function(x, y) {
 };
 
 const sum = function(arr) {
-	let sum = 0;
-  
-  for (const x of arr) {
-    sum += x;
-  }
-
-  return sum;
+	return arr.reduce((total, num) => total + num, 0);
 };
 
 const multiply = function(arr) {
-  let sum = 1;
-
-  for (const x of arr) {
-    sum *= x;
-  }
-
-  return sum;
-
+  return arr.reduce((total, number) => total * number, 1);
 };
 
 const power = function(x, y) {
-	let result = 1;
+  let result = 1;
   
   for (let i = 1; i <= y; i++) {
     result *= x;
@@ -38,7 +25,7 @@ const power = function(x, y) {
 };
 
 const factorial = function(x) {
-	let factorial = 1;
+  let factorial = 1;
 
   for (let i = x; i >= 1; i--) {
     factorial *= i;
